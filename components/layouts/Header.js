@@ -9,22 +9,22 @@ const Header = () => {
   const [mobileStudyOpen, setMobileStudyOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const hero = document.getElementById("hero");
+useEffect(() => {
+  const hero = document.getElementById("hero");
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setScrolled(!entry.isIntersecting);
-      },
-      { threshold: 0 }
-    );
+  if (!hero) return;
 
-    if (hero) observer.observe(hero);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setScrolled(entry.intersectionRatio < 0.3);
+    },
+    { threshold: [0, 0.3, 1] }
+  );
 
-    return () => {
-      if (hero) observer.unobserve(hero);
-    };
-  }, []);
+  observer.observe(hero);
+
+  return () => observer.unobserve(hero);
+}, []);
 
   return (
     <header className={`w-full fixed top-0 z-50 shadow-sm hover:bg-primary ${scrolled ? 'md:bg-primary' : 'md:bg-black/5'} bg-primary group/item-1 transition duration-300`}>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { CiLocationArrow1 } from "react-icons/ci";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { AccordionItem, faqData } from "@/components/ui/Accordion";
 import useFetch from "@/utils/customhooks/useFetch";
 import "swiper/css";
@@ -33,8 +33,9 @@ export default function Home() {
         priority
         alt="Study Abroad Student - Study in Lithuania"
        />
+       <div className="container mx-auto">
       <Swiper
-      modules={[Pagination]}
+      modules={[Pagination, Autoplay]}
       autoplay={{delay: 5000}}
       pagination={{
         clickable: true,
@@ -76,7 +77,8 @@ export default function Home() {
   </SwiperSlide>
 ))}
     </Swiper>
-      </main>
+</div>      
+</main>
        <div className="relative lg:absolute z-20 lg:-bottom-30 lg:left-1/2 lg:-translate-x-1/2 bg-white px-3 py-5 w-full max-w-6xl rounded-lg shadow-lg">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
     {stats.map((item, index) => {
