@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const SendData = (payload, url) => {
   const [data, setData] = useState(null);
@@ -6,22 +7,25 @@ const SendData = (payload, url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!payload) return; // ✅ control here
+    if (!payload) return;
 
     const send = async () => {
       try {
         setLoading(true);
 
-        const res = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
+        const params = {
+          ...payload,
+          EnqDate: payload.EnqDate
+            ? new Date(payload.EnqDate).toISOString() 
+            : "",
+          LandingPageUrl: payload.LandingPageUrl?.trim() || "",
+        };
+
+        const res = await axios.get(url, {
+          params,
         });
 
-        const result = await res.json();
-        setData(result);
+        setData(res.data);
       } catch (err) {
         setError(err);
       } finally {

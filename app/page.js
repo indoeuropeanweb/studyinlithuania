@@ -26,6 +26,7 @@ export default function Home() {
     CourseLevel:"",
     destination:""
   });
+
   const [touched, setTouched] = useState({});
   const [studentDetails, setStudentDetails] = useState(null);
   const [errors, setErrors] = useState({});
@@ -35,15 +36,17 @@ export default function Home() {
   "https://crm.indoeuropean.in/WebService/Lead.asmx/OnlineLead"
   );
 
+  console.log(data, loading, error);
+
   const details = {
-    Fname: user?.name.split(" ")[0] || "",
-    Lname: user?.name.split(" ")[1] || "",
-    CountryCodeid: String(user.countryID) || "67",
-    PhoneNo: String(user.phone) || "",
-    WhatsappNo: String(user.phone) || "",
+    Fname: user?.name?.split(" ")[0] || "",
+    Lname: user?.name?.split(" ")[1] || "",
+    CountryCodeid: user?.countryID ? String(user.countryID) : "67",
+    PhoneNo: user?.phone ? String(user.phone) : "",
+    WhatsappNo: user?.phone ? String(user.phone) : "",
     Emailid: user?.email || "",
     EnquirySourceCategoryID: 2,
-    EnquirySourceID: 88,
+    EnquirySourceID: 85,
     EnqStageid: 1,
     branchid: 0,
     Country1: "",
@@ -56,7 +59,7 @@ export default function Home() {
     PrefferedCallBackTime: user?.CallBackTime || 2,
     HighestQualifcation: user?.highestQualification || "",
     PrefferedBranchID: 0,
-    LandingPageUrl: "Study in Germany Website",
+    LandingPageUrl: window.location.href || "Study in Lithuania Website",
     PhonenoOTPStatus: "0",
   };
 
@@ -111,7 +114,6 @@ const validate = () => {
   }));
 
   let error = "";
-
   if (!value || value === "select") {
     error = "This field is required";
   }
@@ -131,9 +133,8 @@ const validate = () => {
   setErrors((prev) => ({
     ...prev,
     [name]: error,
-  }));
-};
-
+    }));
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -156,6 +157,7 @@ const validate = () => {
   const toggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   const {data:highestQualification, loading:loadingQualification} = useFetch("https://crm.indoeuropean.in/WebService/Lead.asmx", "GetHighestQualification", "");
   const {data:CallBackTime, loading:loadingCallback} = useFetch("https://crm.indoeuropean.in/WebService/Lead.asmx", "GetPreferredCallBackTime", "");
   const {data:CourseLevel, loading:loadingLevel} = useFetch("https://crm.indoeuropean.in/WebService/Lead.asmx", "GetLevel", "");
