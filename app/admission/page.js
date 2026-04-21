@@ -4,6 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io'
 import Image from "next/image";
 
 const page = () => {
+
 const backgroundImage = {
     backgroundImage: "url('/assets/images/admission/admission-banner.webp')", 
     backgroundSize: "cover",
@@ -11,6 +12,7 @@ const backgroundImage = {
     backgroundRepeat: "no-repeat",
     backgroundColor: "#000"
   }
+
   return (
     <div className=''>
         <section className='h-80 flex justify-center items-center' style={backgroundImage}>

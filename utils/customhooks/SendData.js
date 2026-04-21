@@ -1,42 +1,38 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
 
-const SendData = (payload, url) => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    if (!payload) return;
-
-    const send = async () => {
-      try {
-        setLoading(true);
-
-        const params = {
-          ...payload,
-          EnqDate: payload.EnqDate
-            ? new Date(payload.EnqDate).toISOString() 
-            : "",
-          LandingPageUrl: payload.LandingPageUrl?.trim() || "",
-        };
-
-        const res = await axios.get(url, {
-          params,
-        });
-
-        setData(res.data);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
+const SendData = async (user, url) => {
+  try {
+    const details = {
+      Fname: user?.name?.split(" ")[0] || "",
+      Lname: user?.name?.split(" ")[1] || "",
+      CountryCodeid: user?.countryID ? String(user.countryID) : "67",
+      PhoneNo: user?.phone ? String(user.phone) : "",
+      WhatsappNo: user?.phone ? String(user.phone) : "",
+      Emailid: user?.email || "",
+      EnquirySourceCategoryID: 2,
+      EnquirySourceID: 85,
+      EnqStageid: 1,
+      branchid: 0,
+      Country1: "",
+      Levelid: 0,
+      Intakeid: 0,
+      Address1Citytext: user?.city || "",
+      Isstatusid: "1",
+      EnqDate: new Date("20, Apr, 2026").toISOString(),
+      Dob: "",
+      PrefferedCallBackTime: user?.CallBackTime || 2,
+      HighestQualifcation: user?.highestQualification || "",
+      PrefferedBranchID: 0,
+      LandingPageUrl: "https://www.studyinlithuania.in",
+      PhonenoOTPStatus: "0",
     };
 
-    send();
-  }, [payload, url]);
+    const res = await axios.get(url, { params: details });
 
-  return { data, loading, error };
+    return { data: res.data };
+  } catch (error) {
+    return { error };
+  }
 };
 
 export default SendData;
