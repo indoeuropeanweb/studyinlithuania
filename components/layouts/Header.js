@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCaretDown } from "react-icons/fa";
+import { BiSupport } from "react-icons/bi";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -88,9 +89,9 @@ useEffect(() => {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="#contact-form"
-              className={`text-sm md:text-md lg:text-base px-4 py-2 rounded-md hover:bg-white transition duration-300 ${scrolled ? 'bg-gray-100 text-black':'bg-primary text-white'} group-hover/item-1:bg-gray-100 group-hover/item-1:text-black font-medium`}
+              className={`text-sm md:text-md lg:text-base px-4 py-2 rounded-md hover:bg-white transition duration-300 ${scrolled ? 'bg-gray-100 text-primary':'bg-primary text-white'} group-hover/item-1:bg-gray-100 group-hover/item-1:text-primary font-medium`}
             >
-              Get Free Consultation
+             <BiSupport className="size-6 inline-block" />&nbsp; Get Expert Advice
             </Link>
           </div>
           <button
@@ -139,9 +140,9 @@ useEffect(() => {
 
           <Link
             href="#contact-form"
-            className="block mt-4 bg-gray-100 hover:bg-white text-black font-medium px-4 py-2 rounded-md text-center"
+            className="block mt-4 bg-gray-100 hover:bg-white text-primary font-medium px-4 py-2 rounded-md text-center"
           >
-            Get Free Consultation
+           <BiSupport className="size-6 inline-block" />&nbsp; Get Expert Advice
           </Link>
         </div>
       )}

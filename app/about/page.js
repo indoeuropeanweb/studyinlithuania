@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { IoIosArrowForward } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
+import Form from '@/components/layouts/form/Form';
+import { FiYoutube } from "react-icons/fi";
+import { FaFacebook, FaInstagram, FaPhoneAlt  } from "react-icons/fa";
 
 const page = () => {
   const backgroundImage = {
@@ -39,7 +42,7 @@ const page = () => {
         </section>
         <section className='py-15 bg-primary/10'>
           <div className='container mx-auto'>
-          <div className=''>
+          <div className='px-5'>
              <div className=''>
                 <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Top Lithuania Consultants in Delhi</h3>
                 <p className='text-justify mt-2 text-base md:text-lg font-regular'>When it is about choosing the right assistance for studying abroad, trust and experience matter a lot. As leading Lithuanian consultants in Delhi, Indo European has been assisting learners achieve their international education ambitions with transparency and confidence.</p>
@@ -49,10 +52,10 @@ const page = () => {
           </div>
           </div>
         </section>
-        <section className='bg-cover bg-center bg-no-repeat rounded-bl-[180px]' style={backgroundSecond}>
+        <section className='bg-cover bg-center bg-no-repeat md:rounded-bl-[180px]' style={backgroundSecond}>
           <div className=''>
           <div className='container mx-auto'>
-             <div className='max-w-125 py-10 mx-auto lg:mx-0'>
+             <div className='max-w-125 py-10 px-5 mx-auto lg:mx-0'>
                 <h3 className='text-xl sm:text-3xl md:text-4xl font-medium text-white uppercase'>Who we are ?</h3>
                 <p className='text-justify mt-5 text-base md:text-lg font-regular text-white'>Indo-European is one of the most trusted study abroad consultants in India, specializing in European destinations such as Latvia, Lithuania, and other popular study hubs.</p>
                 <p className='text-justify mt-2 text-base md:text-lg font-regular text-white'>With years of experience and in-depth industry knowledge, we have built a strong reputation for providing reliable and result-oriented services. Our team consists of experienced counselors and visa experts who understand every step of the admission and visa process.</p>
@@ -62,7 +65,7 @@ const page = () => {
         </section>
         <section className='py-15'>
           <div className='container mx-auto'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 px-5'>
             <div className=''>
                <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary'>Top Lithuania Consultants in Delhi</h3>
                <p className='text-justify mt-8 text-base md:text-lg font-regular'>When selecting Lithuanian consultants in Delhi, experience is essential, and Indo European offers years of demonstrated experience in effectively mentoring students.</p>
@@ -84,11 +87,11 @@ const page = () => {
         </section>
         <section className='bg-primary/10'>
           <div className='container mx-auto'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 px-5'>
             <div className=''>
                  <Image width={540} height={700} src={'/assets/images/aboutus/proven-record.webp'} alt="Top Lithuania Consultants in Delhi"/>
                </div>
-            <div className='py-15 px-5'>
+            <div className='my-12 px-5'>
                <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary'>Proven track record of success</h3>
                <p className='text-justify mt-6 text-base md:text-lg font-regular'>In Indo-Europe, our students' achievements serve as a gauge of our own success. As trusted Lithuania consultants in Delhi.</p>
                <p className='text-justify text-base md:text-lg font-regular'>In Indo-European, our success is measured by the success of our students. As trusted Lithuania consultants in Delhi, we are proud of our solid performance history.</p>
