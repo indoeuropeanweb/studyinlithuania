@@ -4,9 +4,8 @@ import Link from 'next/link'
 import { IoIosArrowForward } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
-import Form from '@/components/layouts/form/Form';
-import { FiYoutube } from "react-icons/fi";
-import { FaFacebook, FaInstagram, FaPhoneAlt  } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
+import { BiSupport } from "react-icons/bi";
 
 const page = () => {
   const backgroundImage = {
@@ -67,14 +66,14 @@ const page = () => {
           <div className='container mx-auto'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 px-5'>
             <div className=''>
-               <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary'>Top Lithuania Consultants in Delhi</h3>
+               <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary'>Our experience that sets us apart from others</h3>
                <p className='text-justify mt-8 text-base md:text-lg font-regular'>When selecting Lithuanian consultants in Delhi, experience is essential, and Indo European offers years of demonstrated experience in effectively mentoring students.</p>
                <div className='text-justify mt-3 text-base md:text-base font-regular'>
                 <ul className='space-y-1 my-5'>
                   <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>20+ Years of Study Abroad Counseling Experience</p></li>
-                  <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>robust network of universities throughout Europe</p></li>
-                  <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>thorough understanding of the application and visa processes</p></li>
-                  <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>proficiency with intricate student profiles</p></li>
+                  <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>Robust network of universities throughout Europe</p></li>
+                  <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>Thorough understanding of the application and visa processes</p></li>
+                  <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>Proficiency with intricate student profiles</p></li>
                 </ul>
                 </div>
                 <p className='text-justify mt-3 text-base md:text-lg font-regular'>Our expertise enables us to streamline every step of the process, from selecting the ideal course to obtaining a visa, making your trip easy and stress-free.</p>
@@ -85,7 +84,7 @@ const page = () => {
             </div>
           </div>
         </section>
-        <section className='bg-primary/10'>
+        <section className='bg-primary/10 rounded-tr-[180px]'>
           <div className='container mx-auto'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 px-5'>
             <div className=''>
@@ -97,7 +96,7 @@ const page = () => {
                <p className='text-justify text-base md:text-lg font-regular'>In Indo-European, our success is measured by the success of our students. As trusted Lithuania consultants in Delhi, we are proud of our solid performance history.</p>
                <div className='text-justify mt-3 text-base md:text-base font-regular'>
                 <ul className='space-y-1 my-5'>
-                  <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>high rate of visa approval</p></li>
+                  <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>High rate of visa approval</p></li>
                   <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>Thousands of student placements that are successful</p></li>
                   <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>Results that are consistent over several intakes</p></li>
                   <li className='flex items-center gap-1'><FaStar className='text-secondary text-lg'/>&nbsp;	<p>High levels of student satisfaction</p></li>
@@ -105,9 +104,43 @@ const page = () => {
                 </div>
                 <p className='text-justify mt-3 text-base md:text-lg font-regular'>Our methodical approach and professional advice guarantee that students get accepted and begin their international journey with success.</p>
                 <div className='mt-8'>
-                <Link href={'https://indoeuropean.in'} className='text-white px-5 py-3 rounded-md bg-primary'><IoCall className='size-6 text-white inline-block'/>&nbsp; Get Expert Advice</Link>
+                <Link href={'https://indoeuropean.in'} className='text-white px-5 py-3 rounded-md bg-primary hover:bg-primary/75 duration-500 ease-in-out'><IoCall className='size-6 text-white inline-block'/>&nbsp; Get Expert Advice</Link>
                 </div>
                </div>
+            </div>
+          </div>
+        </section>
+        <section className="">
+          <div className="container mx-auto">
+            <div className="py-14 px-6 flex flex-col items-center text-center">
+              
+              <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-primary">
+                Need Guidance for Study Abroad?
+              </h3>
+              
+              <p className="mb-6 text-base lg:text-lg max-w-2xl">
+                Our experts are here to help you choose the right university, course, and country. 
+                Get personalized guidance tailored to your goals.
+              </p>
+              
+              <div className="flex gap-4 flex-wrap justify-center">
+                {/* <Link 
+                  href="/contact"
+                  className="inline-flex items-center gap-2 font-medium border-2 border-secondary/85 text-secondary hover:text-white hover:bg-secondary px-6 py-2 rounded-lg transition ease-in-out duration-500"
+                >
+                  <FaPhone className="size-5" />
+                  Contact Us
+                </Link> */}
+
+                <Link 
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary/85 text-white px-6 py-2 rounded-lg transition duration-500 ease-in-out shadow-md"
+                >
+                  <BiSupport className="size-5" />
+                  Get Free Counseling
+                </Link>
+
+              </div>
             </div>
           </div>
         </section>

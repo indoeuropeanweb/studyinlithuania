@@ -9,7 +9,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const page = () => {
 
   const backgroundImage = {
-    backgroundImage: "url('/assets/images/contact/contact-back.png')", 
+    backgroundImage: "url('/assets/images/contact/contact-us-back.webp')", 
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -31,60 +31,60 @@ const page = () => {
              </ul>
          </div>
         </section>
-          <section className=''>
+          <section className='my-12'>
           <div className='container mx-auto'>
-<div className='rounded-lg my-12 bg-white 
+          <div className='rounded-lg bg-white 
                 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)] 
                 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25),0_10px_15px_-3px_rgba(0,0,0,0.1)] 
                 transition-shadow duration-300 ease-in-out'>
-  <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary text-center pt-5'>
-    Get in Touch
-  </h3>
-  <div className='flex-col-reverse flex md:flex-row justify-center items-center'>
-        <div className='max-w-80 px-5'>
-      <h3 className='text-primary text-lg md:text-xl mt-2 font-semibold'>Contact Info</h3>
-      <p className='text-md lg:text-base mt-1'>Reach out to get expert advice on studying abroad in Lithuania.</p>
-      <div className='pb-2 border-y-2 border-primary/10 my-2'>
-        {/*  */}
-        <ul>
-          <li className='flex items-center gap-2'><div className='inline-block bg-primary/10 p-2 rounded-full'><FaLocationDot className='size-4 text-primary'/></div>&nbsp; <div><h4 className='text-primary text-base md:text-md mt-2 font-semibold'>Location </h4>
-        <p className='text-xs lg:text-sm mt-1 font-medium text-gray-500'>
-           New Delhi
-        </p></div></li>
-          <li className='flex items-center gap-2'><div className='inline-block bg-primary/10 p-2 rounded-full'><FaPhoneAlt className='size-4 text-primary'/></div>&nbsp; <div><h4 className='text-primary text-base md:text-md mt-2 font-semibold'>Phone No</h4>
-        <Link href={'tel:9650133355'} className='text-xs lg:text-sm mt-1 font-medium text-gray-500 hover:underline'>
-           +91 96501 33355
-        </Link></div></li>
-          <li className='flex items-center gap-2'><div className='inline-block bg-primary/10 p-2 rounded-full'><FaVideo className='size-4 text-primary'/></div>&nbsp; <div><h4 className='text-primary text-base md:text-md mt-2 font-semibold'>Zoom ID</h4>
-        <Link href={'https://zoom.us/j/91022278457#success'} className='text-xs lg:text-sm mt-1 font-medium text-gray-500 hover:underline'>
-           910-2227-8457
-        </Link></div></li>
-        </ul>
-      </div> 
-      <div className='pb-2'>
-        <h4 className='text-primary text-base md:text-md mt-2 font-semibold'>Follow us on Socials</h4>
-        <ul className='flex gap-2 mt-2'>
-          <li className='bg-secondary hover:bg-secondary/85 w-8 h-8 rounded-full flex justify-center items-center'>
-            <Link href={"tel:+370-62163395"}><FaPhoneAlt className='size-5 text-white'/></Link>
-          </li>
-          <li className='bg-secondary hover:bg-secondary/85 w-8 h-8 rounded-full flex justify-center items-center'>
-            <Link href={"https://youtube.com"}><FiYoutube className='size-5 text-white'/></Link>
-          </li>
-          <li className='bg-secondary hover:bg-secondary/85 w-8 h-8 rounded-full flex justify-center items-center'>
-            <Link href={"https://instagram.com"}><FaInstagram className='size-5 text-white'/></Link>
-          </li>
-          <li className='bg-secondary hover:bg-secondary/85 w-8 h-8 rounded-full flex justify-center items-center'>
-            <Link href={"https://facebook.com"}><FaFacebook className='size-5 text-white'/></Link>
-          </li>
-        </ul>
-      </div> 
-    </div>
-    <div className='py-10 px-5'>
-      <Form />
-    </div>
-  </div>
-</div>
-            <div className=''>
+          <h3 className='text-2xl md:text-3xl font-semibold text-primary text-center pt-5'>
+            Get in Touch
+          </h3>
+          <div className='flex flex-col lg:flex-row justify-center items-center'>
+                <div className='max-w-80 px-5'>
+              <h3 className='text-primary text-lg md:text-xl mt-2 font-semibold'>Contact Info</h3>
+              <p className='text-md lg:text-base mt-1'>Reach out to get expert advice on studying abroad in Lithuania.</p>
+              <div className='pb-2 border-y-2 border-primary/10 my-2'>
+                {/*  */}
+                <ul className='flex flex-row lg:flex-col gap-2 my-3'>
+                  <li className='flex flex-col lg:flex-row items-center gap-1'><div className='inline-block bg-secondary/10 p-2 rounded-full'><FaLocationDot className='size-4 text-secondary'/></div><div><h4 className='text-primary text-base md:text-md mt-2 font-semibold hidden lg:block'>Location </h4>
+                <p className='text-xs lg:text-sm mt-1 font-medium text-gray-500'>
+                  New Delhi
+                </p></div></li>
+                  <li className='flex flex-col lg:flex-row items-center gap-1'><div className='inline-block bg-secondary/10 p-2 rounded-full'><FaPhoneAlt className='size-4 text-secondary'/></div><div><h4 className='text-primary text-base md:text-md mt-2 font-semibold hidden lg:block'>Phone No</h4>
+                <Link href={'tel:9650133355'} className='text-xs lg:text-sm mt-1 font-medium text-gray-500 hover:underline'>
+                  +91 96501 33355
+                </Link></div></li>
+                  <li className='flex flex-col lg:flex-row items-center gap-1'><div className='inline-block bg-secondary/10 p-2 rounded-full'><FaVideo className='size-4 text-secondary'/></div><div><h4 className='text-primary text-base md:text-md mt-2 font-semibold hidden lg:block'>Zoom ID</h4>
+                <Link href={'https://zoom.us/j/91022278457#success'} target='_blank' className='text-xs lg:text-sm mt-1 font-medium text-gray-500 hover:underline'>
+                  910-2227-8457
+                </Link></div></li>
+                </ul>
+              </div> 
+              <div className='pb-2'>
+                <h4 className='text-primary text-base md:text-md mt-2 font-semibold'>Follow us on Socials</h4>
+                <ul className='flex gap-2 mt-2'>
+                  <li className='bg-tertiary hover:bg-tertiary/85 w-8 h-8 rounded-full flex justify-center items-center'>
+                    <Link href={"tel:+370-62163395"}><FaPhoneAlt className='size-5 text-white'/></Link>
+                  </li>
+                  <li className='bg-tertiary hover:bg-tertiary/85 w-8 h-8 rounded-full flex justify-center items-center'>
+                    <Link href={"https://www.youtube.com/IEESIndoEuropean"} target='_blank'><FiYoutube className='size-5 text-white'/></Link>
+                  </li>
+                  <li className='bg-tertiary hover:bg-tertiary/85 w-8 h-8 rounded-full flex justify-center items-center'>
+                    <Link href={"https://www.instagram.com/indo_european"} target='_blank'><FaInstagram className='size-5 text-white'/></Link>
+                  </li>
+                  <li className='bg-tertiary hover:bg-tertiary/85 w-8 h-8 rounded-full flex justify-center items-center'>
+                    <Link href={"https://www.facebook.com/Indoeuropean.in"} target='_blank'><FaFacebook className='size-5 text-white'/></Link>
+                  </li>
+                </ul>
+              </div> 
+            </div>
+            <div className='py-10 px-5'>
+              <Form />
+            </div>
+          </div>
+        </div>
+            <div className='px-3 py-5'>
                <h3 className='text-primary text-base md:text-md font-semibold mt-5 mb-2'>Delhi - Head Office</h3>
                 <p className='text-sm lg:text-base mt-1 font-medium text-gray-400 mb-5'>First Floor, Double Storey, 18/1 -A, II, near Metro Station Tilak Nagar, above Sona Bakers, Prem Nagar, Tihar Village, New Delhi, Delhi 110058</p>
                 <iframe
@@ -100,7 +100,7 @@ const page = () => {
             </div>
           </div>
         </section>
-        <section className=''>
+        {/* <section className=''>
           <div className='container mx-auto'>
             <div className='py-12'>
             <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary text-center pt-5'>
@@ -108,7 +108,7 @@ const page = () => {
             </h3>
             </div>
             </div>
-        </section>
+        </section> */}
     </div>
   )
 }

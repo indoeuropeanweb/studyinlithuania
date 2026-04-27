@@ -4,28 +4,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaCaretDown } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileStudyOpen, setMobileStudyOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname()
+  const [scrolled, setScrolled] = useState(false)
 
-useEffect(() => {
-  const hero = document.getElementById("hero");
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 50)
+  }
 
-  if (!hero) return;
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      setScrolled(entry.intersectionRatio < 0.3);
-    },
-    { threshold: [0, 0.3, 1] }
-  );
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-  observer.observe(hero);
-
-  return () => observer.unobserve(hero);
-}, []);
+  useEffect(() => {
+    handleScroll()
+  }, [pathname])
 
   return (
     <header className={`w-full fixed top-0 z-50 shadow-sm hover:bg-primary ${scrolled ? 'md:bg-primary' : 'md:bg-black/5'} bg-primary group/item-1 transition duration-300`}>
