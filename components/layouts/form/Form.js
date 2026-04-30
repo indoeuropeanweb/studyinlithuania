@@ -164,7 +164,7 @@ const handleSubmit = async (e) => {
   const {data:countryID, loading:loadingCountryID} = useFetch("https://crm.indoeuropean.in/webService/lead.asmx", "GetCountryCode", "");
 
   return (
-    <div className="relative overflow-hidden w-full">
+    <div className="relative overflow-hidden w-full bg-white">
     <div
     className={`transition-all duration-700 ease-in-out ${
       isSubmitted
