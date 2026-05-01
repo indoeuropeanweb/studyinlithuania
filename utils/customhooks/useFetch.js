@@ -12,7 +12,6 @@ const useFetch = (url, path = "", query = {}) => {
     const fetchData = async () => {
       setLoading(true);
       setError(null);
-
       try {
         let fullUrl = url;
 
@@ -24,7 +23,8 @@ const useFetch = (url, path = "", query = {}) => {
           params: query,
         });
 
-        setData(response.data.data);
+      setData(response.data.data);
+
       } catch (err) {
         console.error("Something went wrong!", err);
         setError(err);
