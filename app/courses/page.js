@@ -9,6 +9,9 @@ import Button from "@mui/joy/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import useFetch from "@/utils/customhooks/useFetch";
 import axios from "axios";
+import CourseCard from "@/components/ui/CourseCard";
+import { FaSearch } from "react-icons/fa";
+import Pagination from '@mui/material/Pagination';
 
 const Page = () => {
   const [filterEl, setFilterEl] = useState({
@@ -17,9 +20,17 @@ const Page = () => {
     level: "",
   });
 
-  const [filters, setFilters] = useState(null);
-  const [courseData, setCourseData] = useState(null);
+  const [filters, setFilters] = useState({
+    searchText: "",
+    university: "",
+    level: "",
+  });
+  const [courseData, setCourseData] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const [page, setPage] = useState(1);
+  const coursesPerPage = 6;
+
 
   const backgroundImage = {
     backgroundImage: "url('/assets/images/courses/courses-banner.webp')",
@@ -36,13 +47,13 @@ const Page = () => {
       try {
         setLoading(true);
 
-        const url = `https://crm.indoeuropean.in/WebService/CourseFinder/Programs_api.asmx/ProgramsAPI?countryid=&univid=${filters.university || ""}&levelid=${filters.level || ""}&intakeid=&searchtext=${filters.searchText || ""}`;
+        const url = `https://crm.indoeuropean.in/WebService/CourseFinder/Programs_api.asmx/ProgramsAPI?countryid=111&univid=${filters.university || ""}&levelid=${filters.level || ""}&intakeid=&searchtext=${filters.searchText || ""}`;
 
         const response = await axios.get(url);
 
-        console.log("API Response:", response.data);
+        console.log("API Response:", response?.data);
 
-        setCourseData(response.data);
+        setCourseData(response?.data);
       } catch (err) {
         console.error("Fetch Error:", err);
       } finally {
@@ -55,8 +66,21 @@ const Page = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFilters({ ...filterEl }); // trigger API
+    setFilters({ ...filterEl });
   };
+  
+  const totalPages = Math.ceil(courseData.length / coursesPerPage);
+
+  const handleChange = (event, value) => {
+    setPage(value);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // optional UX
+  };
+
+  const startIndex = (page - 1) * coursesPerPage;
+  const selectedCourses = courseData.slice(
+    startIndex,
+    startIndex + coursesPerPage
+  );
 
   const { data: universityData } = useFetch(
     "https://crm.indoeuropean.in/WebService/CourseFinder/Programs_api.asmx",
@@ -159,25 +183,33 @@ const Page = () => {
                 ))}
               </Select>
 
-              <Button type="submit" loading={loading} sx={{ flex: 1 }}>
-                Search
+              <Button color="success" type="submit" loading={loading} sx={{ flex: 0.5 }}>
+                <FaSearch className="size-3"/>&nbsp; Search
               </Button>
             </form>
-
-            {/* <pre className="mt-4 text-xs bg-gray-100 p-2 rounded">
-              {JSON.stringify(filterEl, null, 2)}
-            </pre>
-
-            <div className="mt-6">
-              {loading && <p>Loading...</p>}
-
-              {!loading && courseData && (
-                <pre className="text-xs bg-gray-100 p-2 rounded">
-                  {JSON.stringify(courseData, null, 2)}
-                </pre>
-              )}
-            </div> */}
-
+             <div className="my-12 grid grid-cols-1 lg:grid-cols-2 gap-3">
+              {courseData ? selectedCourses.map((course, index) => {
+                return <CourseCard 
+                key={course.Row_No}
+                UnivName={course.UnivName} 
+                Program={course.Program} 
+                LevelName={course.LevelName} 
+                StudyArea={course.Study_Area} 
+                Duration={course.Duration} 
+                Language={course.Launguage_Of_Teaching} 
+                LanguageProficiency={course.English_Proficiency_Requirement} 
+                Description={course.Program_Description}/>
+              }): <div className="text-center">Loading...</div>}
+             </div>
+             <div className="flex justify-center items-center">
+                      <Pagination
+                      count={totalPages}
+                      page={page}
+                      onChange={handleChange}
+                      color="success"
+                      shape="rounded"
+                    />
+             </div>
           </div>
         </div>
       </section>
