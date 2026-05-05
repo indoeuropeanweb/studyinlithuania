@@ -94,11 +94,11 @@ const { name, value } = e.target;
     }
   }
 
-  setErrors((prev) => ({
-    ...prev,
-    [name]: error,
-    }));
-  };
+setErrors((prev) => ({
+  ...prev,
+  [name]: error,
+  }));
+};
 
 useEffect(() => {
   if (isSubmitted) {
@@ -131,19 +131,21 @@ const handleSubmit = async (e) => {
       "https://crm.indoeuropean.in/WebService/Lead.asmx/OnlineLead"
     );
 
-    setResData(data.status);
-    console.log(data);
-    if (data.status === "Emaildulicate" || data.data === "Email Id Allready Exist") {
+    if(data?.status){
+    setResData(data?.status);
+    // console.log(data);
+    if (data?.status === "Emaildulicate" || data.data === "Email Id Allready Exist") {
       setErrors({
         email: "Email ID already exists!"
       });
       return; 
     }
-    if (data.status === "Mobiledulicate" || data.data === "Mobile No Allready Exist") {
+    if (data?.status === "Mobiledulicate" || data.data === "Mobile No Allready Exist") {
       setErrors({
         phone: "Mobile No. already exists!"
       });
       return; 
+    }
     }
 
     setUser(initialForm);
@@ -164,7 +166,7 @@ const handleSubmit = async (e) => {
   const {data:countryID, loading:loadingCountryID} = useFetch("https://crm.indoeuropean.in/webService/lead.asmx", "GetCountryCode", "");
 
   return (
-    <div className="relative overflow-hidden w-full bg-white">
+    <div className="relative overflow-hidden w-full rounded-b-md bg-white">
     <div
     className={`transition-all duration-700 ease-in-out ${
       isSubmitted

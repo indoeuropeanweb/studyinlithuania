@@ -16,14 +16,14 @@ export const heroSlides = [
     subtitle: "Build Your Global Career",
     title: "Unlock International Opportunities with World-Class Education",
     buttonText: "Start Your Journey",
-    link: "/courses",
+    link: "/contact",
     icon: "earth",
   },
   {
     subtitle: "We Guide You at Every Step",
     title: "From Admission to Visa – Your Trusted Partner for Studying Abroad",
     buttonText: "Get Free Consultation",
-    link: "/courses",
+    link: "/contact",
     icon: "handshake",
   },
 ];

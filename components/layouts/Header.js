@@ -2,8 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaCaretDown } from "react-icons/fa";
-import { BiSupport } from "react-icons/bi";
+import { FaCaretDown, FaVideo } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -77,8 +76,8 @@ const Header = () => {
               About Us
             </Link>
 
-            <Link href="/gallery" className={`text-sm md:text-md lg:text-base font-medium text-gray-100 hover:text-white ${scrolled && 'text-white'} transition`}>
-              Gallery
+            <Link href="/services" className={`text-sm md:text-md lg:text-base font-medium text-gray-100 hover:text-white ${scrolled && 'text-white'} transition`}>
+              Services
             </Link>
 
             <Link href="/contact" className={`text-sm md:text-md lg:text-base font-medium text-gray-100 hover:text-white ${scrolled && 'text-white'} transition`}>
@@ -88,10 +87,11 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-4">
             <Link
-              href="#contact-form"
-              className={`text-sm md:text-md lg:text-base px-4 py-2 rounded-md hover:bg-white transition duration-300 ${scrolled ? 'bg-gray-100 text-primary':'bg-primary text-white'} group-hover/item-1:bg-gray-100 group-hover/item-1:text-primary font-medium`}
+              href="https://zoom.us/j/91022278457#success"
+              target="_blank"
+              className={`cursor-pointer text-sm md:text-md lg:text-base px-4 py-2 rounded-md hover:bg-white transition duration-300 ${scrolled ? 'bg-gray-100 text-primary':'bg-primary text-white'} group-hover/item-1:bg-gray-100 group-hover/item-1:text-primary font-medium`}
             >
-             <BiSupport className="size-6 inline-block" />&nbsp; Get Expert Advice
+             <FaVideo className="size-5 inline-block" />&nbsp; Get Expert Advice
             </Link>
           </div>
           <button
@@ -130,8 +130,8 @@ const Header = () => {
             About Us
           </Link>
 
-          <Link href="/gallery" className="block font-medium text-gray-100 hover:text-white">
-            Gallery
+          <Link href="/services" className="block font-medium text-gray-100 hover:text-white">
+            Services
           </Link>
 
           <Link href="/contact" className="block font-medium text-gray-100 hover:text-white">
@@ -139,10 +139,11 @@ const Header = () => {
           </Link>
 
           <Link
-            href="#contact-form"
+            href="https://zoom.us/j/91022278457#success"
+            target="_blank"
             className="block mt-4 bg-gray-100 hover:bg-white text-primary font-medium px-4 py-2 rounded-md text-center"
           >
-           <BiSupport className="size-6 inline-block" />&nbsp; Get Expert Advice
+           <FaVideo className="size-5 inline-block" />&nbsp; Get Expert Advice
           </Link>
         </div>
       )}

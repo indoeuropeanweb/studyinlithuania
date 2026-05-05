@@ -5,10 +5,14 @@ import { FaRegClock } from "react-icons/fa";
 import { IoLanguage } from "react-icons/io5";
 import { PiStudent } from "react-icons/pi";
 import { CiLocationArrow1 } from "react-icons/ci";
+import {usePopup} from "@/context/PopupProvider";
 
 const CourseCard = ({UnivName, LevelName, Program, StudyArea, Duration, Language, LanguageProficiency, Description}) => {
+  
+  const {openPopup} = usePopup()
+  
   return (
-    <div className="h-full flex flex-col justify-between px-5 py-5 rounded-md shadow-sm shadow-gray-500">
+  <div className="h-full flex flex-col justify-between px-5 py-5 rounded-md shadow-sm shadow-gray-500">
   
   <div className="flex justify-between items-center border-b-2 border-gray-300 pb-3">
     <div className="flex items-center gap-2">
@@ -96,7 +100,7 @@ const CourseCard = ({UnivName, LevelName, Program, StudyArea, Duration, Language
   </div>
 
   <div className="flex justify-end mt-4">
-    <button className="text-sm lg:text-md px-3 py-2 bg-primary text-white rounded-md cursor-pointer hover:bg-primary/85 duration-500 ease-in-out">
+    <button onClick={() => openPopup(true)} className="text-sm lg:text-md px-3 py-2 bg-primary text-white rounded-md cursor-pointer hover:bg-primary/85 duration-500 ease-in-out">
       <CiLocationArrow1 className="size-5 inline-block"/>&nbsp; Apply Now
     </button>
   </div>

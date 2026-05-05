@@ -2,6 +2,9 @@ import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import { PopupProvider } from "@/context/PopupProvider";
+import PopupManager from "@/components/ui/PopupManager";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,9 +31,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.className}>
       <body>
+        <PopupProvider>
         <Header />
+        <PopupManager />
         {children}
         <Footer />
+        </PopupProvider>
       </body>
     </html>
   );

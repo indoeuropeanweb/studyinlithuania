@@ -22,13 +22,13 @@ export default function Home() {
       <section className="relative">
       <main className="relative min-h-140 xl:min-h-180 w-full bg-white dark:bg-black">
         <div id="hero"></div>
-       <Image 
-        src="/assets/images/homepage/woman-in-park.webp"
-        fill
-        style={{ objectFit: "cover" }} 
-        priority
-        alt="Study Abroad Student - Study in Lithuania"
-       />
+        <Image 
+          src="/assets/images/homepage/woman-in-park.webp"
+          fill
+          style={{ objectFit: "cover" }} 
+          priority
+          alt="Study Abroad Student - Study in Lithuania"
+        />
        <div className="container mx-auto">
       <Swiper
       modules={[Pagination, Autoplay]}

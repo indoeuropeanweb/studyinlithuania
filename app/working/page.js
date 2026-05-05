@@ -3,11 +3,14 @@ import { IoIosArrowForward } from 'react-icons/io'
 import Link from 'next/link'
 import Image from 'next/image'
 import { GrCafeteria, GrDeliver } from "react-icons/gr";
-import { FaHeadset, FaShop, FaUserNurse } from "react-icons/fa6";
+import { FaHeadset, FaShop, FaUserNurse, FaVideo } from "react-icons/fa6";
 import { IoHomeOutline } from "react-icons/io5";
 import { TbClockHour2, TbTruckDelivery } from "react-icons/tb";
 import { FaRegCalendarAlt, FaLaptopCode } from 'react-icons/fa';
 import { MdOutlineEngineering } from "react-icons/md";
+import { CiLocationArrow1 } from "react-icons/ci";
+import {usePopup} from "@/context/PopupProvider";
+
 
 const page = () => {
 
@@ -26,6 +29,8 @@ const backgroundCTA = {
    backgroundRepeat: "no-repeat",
    backgroundColor: "#000"
 }
+
+const {openPopup} = usePopup();
 
   return (
     <div>
@@ -185,12 +190,12 @@ const backgroundCTA = {
         <section className='bg-primary/10' style={backgroundCTA}>
          <div className='container mx-auto'>
             <div className='py-12 max-w-160 px-5'>
-            <h5 className='text-lg sm:text-xl md:text-2xl font-medium mt-5 text-tertiary'>Ready to Work in Lithuania After Your Studies?</h5>
+            <h5 className='text-lg sm:text-xl md:text-2xl font-medium mt-5 text-primary'>Ready to Work in Lithuania After Your Studies?</h5>
             <p className='text-justify mt-2 text-base md:text-lg font-regular text-gray-700'>Explore job opportunities, understand stay-back options, and start your career in Europe with expert guidance from <Link className='decoration-0 hover:underline text-tertiary font-medium' href={'https://indoeuropean.in'} target='_blank'>Indo-European Study Abroad Consultants</Link>.</p>
             <div className='mt-10 space-x-3'>
               {/* <Link className='font-semibold hover:underline text-sm md:text-base text-primary' href={'/contact'}>Check Eligibility</Link> */}
-              <Link className='font-medium text-sm md:text-base text-primary bg-white hover:text-white hover:bg-primary border-2 border-primary px-5 py-2 rounded-md duration-500 ease-in-out' href={'/contact'}>Get Free Counseling</Link>
-              <Link className='font-medium text-sm md:text-base text-white bg-primary hover:bg-primary/75 border-2 border-primary px-5 py-2 rounded-md duration-500 ease-in-out' href={'/contact'}>Apply Now</Link>
+              <Link className='font-medium text-sm md:text-base text-primary bg-white hover:text-white hover:bg-primary border-2 border-primary px-5 py-2 rounded-md duration-500 ease-in-out' href={'https://zoom.us/j/91022278457#success'}><FaVideo className='inline-block size-5'/> &nbsp;Get Expert Advice</Link>
+              <button className='font-medium text-sm md:text-base text-white bg-primary hover:bg-primary/75 border-2 border-primary px-5 py-2 rounded-md duration-500 ease-in-out' onClick={() => openPopup(true)}><CiLocationArrow1 className='inline-block size-5'/> &nbsp;Apply Now</button>
             </div>
             </div>
          </div>

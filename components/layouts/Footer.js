@@ -25,7 +25,7 @@ const Footer = () => {
               <li><Link className='text-white hover:text-white/85 hover:underline' href={"/"}>Home</Link></li>
               <li><Link className='text-white hover:text-white/85 hover:underline' href={"/Study"}>Study</Link></li>
               <li><Link className='text-white hover:text-white/85 hover:underline' href={"/about"}>About Us</Link></li>
-              <li><Link className='text-white hover:text-white/85 hover:underline' href={"/gallery"}>Gallery</Link></li>
+              <li><Link className='text-white hover:text-white/85 hover:underline' href={"/services"}>Services</Link></li>
               <li><Link className='text-white hover:text-white/85 hover:underline' href={"/contact"}>Contact Us</Link></li>
              </ul>
            </div>
@@ -42,8 +42,8 @@ const Footer = () => {
             <div className='mt-14 lg:mx-auto'>
              <h4 className='text-secondary text-base lg:text-lg font-semibold uppercase'>Contact Us</h4>
              <ul className='mt-3 flex flex-col gap-1'>
-              <li><IoLocationOutline className='size-5 inline-block text-white'/>&nbsp;<Link className='text-white' href={"/"}>Study in Lithuania Center</Link></li>
-              <li className='mt-1'><FiPhone className='size-5 inline-block text-white'/>&nbsp;<Link className='text-white hover:text-white/85 hover:underline' href={"tel:+370-62163395"}>+370-62163395</Link></li>
+              <li><IoLocationOutline className='size-6 inline-block text-white'/>&nbsp;<Link className='text-white' href={"/"}>Study in Lithuania Center</Link></li>
+              <li className='mt-1'><FiPhone className='size-5 inline-block text-white'/>&nbsp;<Link className='text-white hover:text-white/85 hover:underline' href={"tel:+919650133355"}>+91 96501 33355</Link></li>
              </ul>
            </div>
          </div>

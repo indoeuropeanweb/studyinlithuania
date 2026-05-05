@@ -1,11 +1,10 @@
-import React from 'react'
+"use client";
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoIosArrowForward } from "react-icons/io";
-import { FaStar } from "react-icons/fa";
-import { IoCall } from "react-icons/io5";
-import { FaPhone } from "react-icons/fa6";
-import { BiSupport } from "react-icons/bi";
+import { FaStar, FaVideo } from "react-icons/fa";
+import { CiLocationArrow1 } from 'react-icons/ci';
+import { usePopup } from "@/context/PopupProvider";
 
 const page = () => {
   const backgroundImage = {
@@ -23,6 +22,8 @@ const page = () => {
     backgroundRepeat: "no-repeat",
     backgroundColor: "#000"
   }
+
+  const { openPopup } = usePopup();
 
   return (
     <div className=''>
@@ -104,7 +105,7 @@ const page = () => {
                 </div>
                 <p className='text-justify mt-3 text-base md:text-lg font-regular'>Our methodical approach and professional advice guarantee that students get accepted and begin their international journey with success.</p>
                 <div className='mt-8'>
-                <Link href={'https://indoeuropean.in'} className='text-white px-5 py-3 rounded-md bg-primary hover:bg-primary/75 duration-500 ease-in-out'><IoCall className='size-6 text-white inline-block'/>&nbsp; Get Expert Advice</Link>
+                <button onClick={() => openPopup(true)} className='text-white px-5 py-3 rounded-md bg-primary hover:bg-primary/75 duration-500 ease-in-out cursor-pointer'><CiLocationArrow1 className='size-5 text-white inline-block'/>&nbsp; Apply Now</button>
                 </div>
                </div>
             </div>
@@ -124,20 +125,13 @@ const page = () => {
               </p>
               
               <div className="flex gap-4 flex-wrap justify-center">
-                {/* <Link 
-                  href="/contact"
-                  className="inline-flex items-center gap-2 font-medium border-2 border-secondary/85 text-secondary hover:text-white hover:bg-secondary px-6 py-2 rounded-lg transition ease-in-out duration-500"
-                >
-                  <FaPhone className="size-5" />
-                  Contact Us
-                </Link> */}
-
                 <Link 
-                  href="/contact"
+                  href="https://zoom.us/j/91022278457#success"
+                  target="_blank"
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary/85 text-white px-6 py-2 rounded-lg transition duration-500 ease-in-out shadow-md"
                 >
-                  <BiSupport className="size-5" />
-                  Get Free Counseling
+                <FaVideo className="size-5" />
+                  Connect with Us
                 </Link>
 
               </div>

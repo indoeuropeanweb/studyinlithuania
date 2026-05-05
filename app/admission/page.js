@@ -1,7 +1,7 @@
-import React from 'react'
+"use client";
 import Link from 'next/link'
-import { IoIosArrowForward } from 'react-icons/io'
 import Image from "next/image";
+import { IoIosArrowForward } from 'react-icons/io'
 import { admissionProcessData } from '@/utils/clientdata/admission';
 import { LuCalendarClock } from "react-icons/lu";
 import { BsPassport } from "react-icons/bs";
