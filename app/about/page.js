@@ -28,8 +28,7 @@ const page = () => {
   return (
     <div className=''>
         <section className='h-80 flex justify-center items-center' style={backgroundImage}>
-          <div id="hero"></div>
-         {/* <Image className='opacity-50' width={1380} height={180} src={'/assets/images/aboutus/Aboutus-Lithuania.webp'} alt='Study in Lithuania' />  */}
+         <div id="hero"></div>
          <div className='px-10 bg-black/50 h-full w-full flex justify-center items-center flex-col'>
              <h1 className='uppercase text-xl md:text-2xl lg:text-4xl text-white font-bold mt-5 text-center'>About Us</h1>
              <ul className='flex justify-center items-center mt-3 text-white'>

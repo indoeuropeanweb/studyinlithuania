@@ -9,6 +9,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { heroSlides, stats, universities, admissionData, studyBenefits, getIcon  } from "@/utils/clientdata/homepage";
 import Form from "@/components/layouts/form/Form";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
 
 
 export default function Home() {
@@ -156,7 +158,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-primary/12 rounded-tr-[180px] px-8">
+      <section className="py-20 bg-primary/12 rounded-tr-[180px] rounded-bl-[180px] px-8">
         <div className="container mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-end text-primary">Study in Lithuania - Key Benefits</h2>
           {studyBenefits.map((data, index) => {
@@ -167,74 +169,134 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="py-24">
+      <section className="py-12">
+       <div className="container mx-auto">
+         <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Courses For Lithuania</h2>
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-8 mt-16">
+             <div className="shadow-lg shadow-gray-500 rounded-lg min-h-120">
+               <div className="">
+                   <Image className="rounded-t-lg" height={240} width={480} src={'/assets/images/homepage/courses/bachelors-image.webp'} alt="Bachelor's Programs in Lithuania" />
+               </div>
+               <div className="p-4 rounded-lg">
+                 <div className="flex justify-between items-center">
+                  <h4 className="text-md md:text-lg font-primary font-medium">Bachelor's Degree</h4>
+                  <span className="text-sm md:text-md font-primary font-medium bg-primary text-white px-3 py-1 rounded-full">3 to 4 years</span>
+                  </div>
+                  <ul className="mt-4 space-y-1">
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp; <span className="">Tuition Fee</span>: Approx. €1,500 – €4,000 per year</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;Completion of secondary education from a well-recognized school</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;Passing or minimum percentage of your academics</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;Proof of English fluency (IELTS, if necessary)</li>
+                  </ul>
+               </div>
+             </div>
+             <div className="shadow-lg shadow-gray-500 rounded-lg min-h-120">
+               <div className="">
+                   <Image className="rounded-t-lg" height={240} width={480} src={'/assets/images/homepage/courses/masters-image.webp'} alt="Bachelor's Programs in Lithuania" />
+               </div>
+               <div className="p-4 rounded-lg">
+                 <div className="flex justify-between items-center">
+                  <h4 className="text-md md:text-lg font-primary font-medium">Master's Degree</h4>
+                  <span className="text-sm md:text-md font-primary font-medium bg-primary text-white px-3 py-1 rounded-full">1 to 2 years</span>
+                  </div>
+                  <ul className="mt-4 space-y-1">
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;<span className="">Tuition Fee</span>: Approx. €2,000 – €5,000 per year</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;{"Bachelor’s degree from a relevant course"}</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;Proficiency in the English language</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;Require the purpose of the statement</li>
+                  </ul>
+               </div>
+             </div>
+             <div className="shadow-lg shadow-gray-500 rounded-lg min-h-120">
+               <div className="">
+                   <Image className="rounded-t-lg" height={240} width={480} src={'/assets/images/homepage/courses/phd-image.webp'} alt="Bachelor's Programs in Lithuania" />
+               </div>
+               <div className="p-4 rounded-lg">
+                 <div className="flex justify-between items-center">
+                  <h4 className="text-md md:text-lg font-primary font-medium">PhD Degree</h4>
+                  <span className="text-sm md:text-md font-primary font-medium bg-primary text-white px-3 py-1 rounded-full">4 to 5 years</span>
+                  </div>
+                  <ul className="mt-4 space-y-1">
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp; <span className="">Tuition Fee</span>: Approx. €1,500 to €4,000 per year.</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;Your previous studies should be completed at a recognized school.</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;It is necessary to have an excellent academic background or the minimum requirement of percentage must be met.</li>
+                    <li className="text-sm md:text-md"><IoMdCheckmarkCircleOutline className="text-primary size-5 inline-block"/>&nbsp;You have to prove your English language skills (IELTS might be  ‍ ‌‍ ‍‌needed)</li>
+                  </ul>
+               </div>
+             </div>
+         </div>
+         <div className="mt-15 text-end">
+         <Link href={"/courses"} className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/85 duration-500 ease-in-out">Explore Courses &nbsp;<FaArrowRight className="size-4 inline-block"/></Link>
+         </div>
+       </div>
+      </section>
+      <section className="py-24 bg-primary/10 rounded-tr-[180px]">
         <div className="container mx-auto">
            <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Our Testimonials</h2>
            <div className="overflow-x-hidden whitespace-nowrap max-w-540 mt-12">
-<div className="overflow-hidden">
-  <div className="flex animate-marquee gap-5">
+           <div className="overflow-hidden">
+              <div className="flex animate-marquee gap-5">
+                <div className="shadow-gray-300 shadow-sm rounded-sm">
+                  <iframe
+                    className=""
+                    src="https://www.youtube.com/embed/9NZ-Sg6wRg8?si=ZzOpY54QetJ7G53X"
+                    title="YouTube video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="shadow-gray-300 shadow-sm rounded-sm">
+                  <iframe
+                    className=""
+                    src="https://www.youtube.com/embed/wkj20Pwwykk?si=e2ZkffNi01E1mXLF"
+                    title="YouTube video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="shadow-gray-300 shadow-sm rounded-sm">
+                  <iframe
+                    className=""
+                    src="https://www.youtube.com/embed/jQdo059h1cE?si=wudCnEVTEvyrLOyD"
+                    title="YouTube video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
 
-    <div className="shadow-gray-300 shadow-sm rounded-sm">
-      <iframe
-        className=""
-        src="https://www.youtube.com/embed/9NZ-Sg6wRg8?si=ZzOpY54QetJ7G53X"
-        title="YouTube video"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
-    </div>
-    <div className="shadow-gray-300 shadow-sm rounded-sm">
-      <iframe
-        className=""
-        src="https://www.youtube.com/embed/wkj20Pwwykk?si=e2ZkffNi01E1mXLF"
-        title="YouTube video"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
-    </div>
-    <div className="shadow-gray-300 shadow-sm rounded-sm">
-      <iframe
-        className=""
-        src="https://www.youtube.com/embed/jQdo059h1cE?si=wudCnEVTEvyrLOyD"
-        title="YouTube video"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
-    </div>
-
-    <div className="shadow-gray-300 shadow-sm rounded-sm">
-      <iframe
-        className=""
-        src="https://www.youtube.com/embed/9NZ-Sg6wRg8?si=ZzOpY54QetJ7G53X"
-        title="YouTube video"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
-    </div>
-    <div className="shadow-gray-300 shadow-sm rounded-sm">
-      <iframe
-        className=""
-        src="https://www.youtube.com/embed/wkj20Pwwykk?si=e2ZkffNi01E1mXLF"
-        title="YouTube video"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
-    </div>
-    <div className="shadow-gray-300 shadow-sm rounded-sm">
-      <iframe
-        className=""
-        src="https://www.youtube.com/embed/jQdo059h1cE?si=wudCnEVTEvyrLOyD"
-        title="YouTube video"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
-    </div>
-  </div>
-</div>
+                <div className="shadow-gray-300 shadow-sm rounded-sm">
+                  <iframe
+                    className=""
+                    src="https://www.youtube.com/embed/9NZ-Sg6wRg8?si=ZzOpY54QetJ7G53X"
+                    title="YouTube video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="shadow-gray-300 shadow-sm rounded-sm">
+                  <iframe
+                    className=""
+                    src="https://www.youtube.com/embed/wkj20Pwwykk?si=e2ZkffNi01E1mXLF"
+                    title="YouTube video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="shadow-gray-300 shadow-sm rounded-sm">
+                  <iframe
+                    className=""
+                    src="https://www.youtube.com/embed/jQdo059h1cE?si=wudCnEVTEvyrLOyD"
+                    title="YouTube video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+           </div>
            </div>
         </div>
       </section>
-      <section className="pt-20 bg-primary/12">
+      <section className="pt-20">
         <div className="container mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Frequently Asked Questions (FAQ)</h2>
           <div className="flex-col-reverse flex md:flex-row justify-center items-center md:gap-12">

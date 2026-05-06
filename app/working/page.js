@@ -11,7 +11,6 @@ import { MdOutlineEngineering } from "react-icons/md";
 import { CiLocationArrow1 } from "react-icons/ci";
 import {usePopup} from "@/context/PopupProvider";
 
-
 const page = () => {
 
 const backgroundImage = {
@@ -36,7 +35,6 @@ const {openPopup} = usePopup();
     <div>
         <section className='h-80 flex justify-center items-center' style={backgroundImage}>
         <div id="hero"></div>
-         {/* <Image className='opacity-50' width={1380} height={180} src={'/assets/images/aboutus/Aboutus-Lithuania.webp'} alt='Study in Lithuania' />  */}
         <div className='px-10 bg-black/50 h-full w-full flex justify-center items-center flex-col'>
              <h1 className='uppercase text-xl md:text-2xl lg:text-4xl text-white font-bold mt-5 text-center'>Working</h1>
              <ul className='flex justify-center items-center mt-3 text-white'>
@@ -71,7 +69,6 @@ const {openPopup} = usePopup();
               <li><span className='font-semibold text-base lg:text-lg text-primary'>Full-Time Studies</span><p className='text-sm lg:text-base'>Students enrolling in full-time studies are not required to get a separate work permit.</p></li>
              </ul>
              <p className='text-justify mt-2 text-base md:text-lg font-regular'>The above given rules are very friendly and beneficial for students who maintain jobs in Lithuania along with their studies.</p>
-  
           </div>
           <div>
             <Image className='rounded-md' width={540} height={480} src={'/assets/images/working/working-lithuania-2.jpg'} alt="Top Lithuania Consultants in Delhi"/>
