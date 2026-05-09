@@ -40,7 +40,7 @@ const page = () => {
          </div>
         </section>
         <section className='py-15 bg-primary/10'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
           <div className='px-5'>
              <div className=''>
                 <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Top Lithuania Consultants in Delhi</h3>
@@ -53,7 +53,7 @@ const page = () => {
         </section>
         <section className='bg-cover bg-center bg-no-repeat md:rounded-bl-[180px]' style={backgroundSecond}>
           <div className=''>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
              <div className='max-w-125 py-10 px-5 mx-auto lg:mx-0'>
                 <h3 className='text-xl sm:text-3xl md:text-4xl font-medium text-white uppercase'>Who we are ?</h3>
                 <p className='text-justify mt-5 text-base md:text-lg font-regular text-white'>Indo-European is one of the most trusted study abroad consultants in India, specializing in European destinations such as Latvia, Lithuania, and other popular study hubs.</p>
@@ -63,7 +63,7 @@ const page = () => {
           </div>
         </section>
         <section className='py-15'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 px-5'>
             <div className=''>
                <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary'>Our experience that sets us apart from others</h3>
@@ -85,7 +85,7 @@ const page = () => {
           </div>
         </section>
         <section className='bg-primary/10 rounded-tr-[180px]'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 px-5'>
             <div className=''>
                  <Image width={540} height={700} src={'/assets/images/aboutus/proven-record.webp'} alt="Top Lithuania Consultants in Delhi"/>
@@ -111,7 +111,7 @@ const page = () => {
           </div>
         </section>
         <section className="">
-          <div className="container mx-auto">
+          <div className="mx-auto max-w-6xl px-4">
             <div className="py-14 px-6 flex flex-col items-center text-center">
               
               <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-primary">

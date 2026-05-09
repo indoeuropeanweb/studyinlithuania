@@ -14,7 +14,7 @@ const Form = () => {
     highestQualification:"",
     CallBackTime:"",
     CourseLevel:"",
-    destination:""
+    destination:111
   }
 
 const [user, setUser] = useState(initialForm);
@@ -164,6 +164,7 @@ const handleSubmit = async (e) => {
   const {data:CourseLevel, loading:loadingLevel} = useFetch("https://crm.indoeuropean.in/WebService/Lead.asmx", "GetLevel", "");
   const {data:destinations, loading:loadingDestination} = useFetch("https://crm.indoeuropean.in/WebService/CourseFinder/Programs_api.asmx", "CountryAPI", "");
   const {data:countryID, loading:loadingCountryID} = useFetch("https://crm.indoeuropean.in/webService/lead.asmx", "GetCountryCode", "");
+
 
   return (
     <div className="relative overflow-hidden w-full rounded-b-md bg-white">
@@ -315,6 +316,7 @@ const handleSubmit = async (e) => {
 
         <div className="flex flex-col">
             <select
+            disabled
             name="destination"
             value={user.destination}
             onBlur={handleBlur}

@@ -61,7 +61,7 @@ const Page = () => {
 
         const response = await axios.get(url);
 
-        console.log("API Response:", response?.data);
+        // console.log("API Response:", response?.data);
 
         setCourseData(response?.data);
       } catch (err) {
@@ -104,13 +104,13 @@ const Page = () => {
     ""
   );
 
-  useEffect(() => {
-    console.log("Filters:", filters);
-  }, [filters]);
+  // useEffect(() => {
+  //   console.log("Filters:", filters);
+  // }, [filters]);
 
-  useEffect(() => {
-    console.log("Course Data:", courseData);
-  }, [courseData]);
+  // useEffect(() => {
+  //   console.log("Course Data:", courseData);
+  // }, [courseData]);
 
   return (
     <div>
@@ -119,7 +119,7 @@ const Page = () => {
         style={backgroundImage}
       >
         <div className="bg-black/50 h-full w-full flex justify-center items-center">
-          <div className="container mx-auto text-center text-white">
+          <div className="mx-auto max-w-6xl px-4 text-center text-white">
             <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
               Explore Courses
             </h1>
@@ -135,7 +135,7 @@ const Page = () => {
       </section>
 
       <section className="my-8">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="py-12 px-4 shadow rounded-md">
 
             <form
@@ -224,7 +224,7 @@ const Page = () => {
         </div>
       </section>
       <section className='bg-primary/10' style={backgroundCTA}>
-         <div className='container mx-auto'>
+         <div className='mx-auto max-w-6xl px-4'>
             <div className='py-12 max-w-160 px-5'>
             <h5 className='text-lg sm:text-xl md:text-2xl font-semibold mt-5 text-primary'>Ready to Work in Lithuania After Your Studies?</h5>
             <p className='text-justify mt-2 text-base md:text-lg font-regular text-gray-700'>Explore job opportunities, understand stay-back options, and start your career in Europe with expert guidance from <Link className='decoration-0 hover:underline text-tertiary font-medium' href={'https://indoeuropean.in'} target='_blank'>Indo-European Study Abroad Consultants</Link>.</p>

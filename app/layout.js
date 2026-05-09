@@ -5,7 +5,6 @@ import "./globals.css";
 import { PopupProvider } from "@/context/PopupProvider";
 import PopupManager from "@/components/ui/PopupManager";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,6 +24,9 @@ const poppins = Poppins({
 export const metadata = {
   title: "A Study Abroad Agency for Indian Students | Study in Lithuania",
   description: "A trusted study abroad agency for Indian students, offering expert guidance to pursue higher education in Lithuania. We assist with university selection, admissions, visa processing, and career support to ensure a smooth and successful journey abroad.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

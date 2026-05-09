@@ -31,7 +31,7 @@ export default function Home() {
           priority
           alt="Study Abroad Student - Study in Lithuania"
         />
-       <div className="container mx-auto">
+       <div className="mx-auto max-w-6xl px-4">
       <Swiper
       modules={[Pagination, Autoplay]}
       autoplay={{delay: 5000}}
@@ -102,7 +102,7 @@ export default function Home() {
 </div>
 </section>
 <section className="pt-15 lg:pt-40 pb-10 px-10 bg-primary/12">
-  <div className="container mx-auto">
+  <div className="mx-auto max-w-6xl px-4">
     <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Why Lithuania?</h2>
     <p className="text-lg lg:text-xl text-justify mt-8 font-regular">
           Planning to study in a European country but looking for something different? Study in Lithuania -
@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </section>
       <section className="py-16 px-5">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Our Partner Universities</h2>
           <div className="flex flex-wrap justify-center items-center gap-10 mt-14">
             {universities.map((university, index) => {
@@ -133,7 +133,7 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[url('/assets/images/homepage/girl-2.png')] bg-cover bg-center bg-no-repeat rounded-bl-[180px]">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="py-20 max-w-175 px-8">
              <h2 className="uppercase text-2xl sm:text-3xl md:text-4xl font-medium text-white">Applications are Open !</h2>
                {admissionData.map((data, index) => {
@@ -146,7 +146,7 @@ export default function Home() {
         </div>
       </section>
       <section className="py-20">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Grab Your Free Consultation Now !</h2>
           <div className="flex-col-reverse flex md:flex-row justify-center items-center gap-10 mt-16">
               <Form />
@@ -159,7 +159,7 @@ export default function Home() {
         </div>
       </section>
       <section className="py-20 bg-primary/12 rounded-tr-[180px] rounded-bl-[180px] px-8">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-end text-primary">Study in Lithuania - Key Benefits</h2>
           {studyBenefits.map((data, index) => {
             return   <div className="mt-5 text-end" key={index}>
@@ -170,7 +170,7 @@ export default function Home() {
         </div>
       </section>
       <section className="py-12">
-       <div className="container mx-auto">
+       <div className="mx-auto max-w-6xl px-4">
          <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Courses For Lithuania</h2>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-8 mt-16">
              <div className="shadow-lg shadow-gray-500 rounded-lg min-h-120">
@@ -231,7 +231,7 @@ export default function Home() {
        </div>
       </section>
       <section className="py-24 bg-primary/10 rounded-tr-[180px]">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
            <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Our Testimonials</h2>
            <div className="overflow-x-hidden whitespace-nowrap max-w-540 mt-12">
            <div className="overflow-hidden">
@@ -297,7 +297,7 @@ export default function Home() {
         </div>
       </section>
       <section className="pt-20">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Frequently Asked Questions (FAQ)</h2>
           <div className="flex-col-reverse flex md:flex-row justify-center items-center md:gap-12">
             <div className="">

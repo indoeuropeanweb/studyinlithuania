@@ -35,7 +35,7 @@ const page = () => {
           <div id="hero"></div>
          {/* <Image className='opacity-50' width={1380} height={180} src={'/assets/images/aboutus/Aboutus-Lithuania.webp'} alt='Study in Lithuania' />  */}
          <div className='bg-black/50 h-full w-full flex justify-center items-center'>
-         <div className='container mx-auto'>
+         <div className='mx-auto max-w-6xl px-4'>
          <div className='flex justify-center items-center flex-col'>
              <h1 className='uppercase text-xl md:text-2xl lg:text-4xl text-white font-bold mt-5 text-center'>Visa &amp; PR</h1>
              <ul className='flex justify-center items-center mt-3 text-white'>
@@ -49,7 +49,7 @@ const page = () => {
          </div>
         </section>
         <section className='py-12 bg-primary/10'>
-           <div className='container mx-auto'>
+           <div className='mx-auto max-w-6xl px-4'>
              <div className='mx-5'>
                 <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Complete Guide to Lithuanian Visa & TRP</h3>
                 <p className='text-justify mt-2 text-base md:text-lg font-regular'>Planning to study in Europe? Securing a Lithuania student visa is an important step toward turning your dream into reality. Lithuania offers a simple and efficient visa process for international students, making it easier to begin your academic journey without complications.</p>
@@ -59,7 +59,7 @@ const page = () => {
            </div>
         </section>
         <section className='py-12'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
             <div className='mx-5'>
              <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Step-by-step guide to getting a Lithuanian study visa</h3>
                  <div className='flex flex-col lg:flex-row justify-center items-center gap-12'>
@@ -117,7 +117,7 @@ const page = () => {
           </div>
         </section>
         <section className='py-12 bg-primary/10'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
             <div className='mx-5'>
             <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Lithuania Temporary Residence Permit (TRP) – Complete Guide</h3>
             <p className='text-justify mt-2 text-base md:text-lg font-regular'>After reaching Lithuania, students have to apply for a Lithuanian TRP (temporary residence permit) for long-term residence.</p>
@@ -144,7 +144,7 @@ const page = () => {
           </div>
         </section>
         <section className='py-12'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
             <div className='mx-5'>
             <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Documents required for a Lithuania study visa</h3>
             <p className='text-justify mt-2 text-base md:text-lg font-regular'>Appropriate documentation is essential for a Lithuanian student visa application to be successful. The checklist is as follows:</p>
@@ -177,7 +177,7 @@ const page = () => {
           </div>
         </section>
       <section className="pt-20 bg-primary/12">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
           <div className='mx-5'>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Frequently Asked Questions (FAQ)</h2>
           <div className="flex-col-reverse flex md:flex-row justify-center items-center md:gap-12 py-12">

@@ -28,7 +28,7 @@ const backgroundImage = {
         <section className='h-80 flex justify-center items-center' style={backgroundImage}>
         <div id="hero"></div>
          <div className='bg-black/50 h-full w-full flex justify-center items-center'>
-         <div className='container mx-auto'>
+         <div className='mx-auto max-w-6xl px-4'>
          <div className='flex justify-center items-center flex-col'>
              <h1 className='uppercase text-xl md:text-2xl lg:text-4xl text-white font-bold mt-5 text-center'>Admission</h1>
              <ul className='flex justify-center items-center mt-3 text-white'>
@@ -42,7 +42,7 @@ const backgroundImage = {
          </div>
         </section>
         <section className='py-15 bg-primary/10'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
           <div className='px-5'>
              <div className=''>
                 <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Lithuania Admission Process for Indian Students</h3>
@@ -53,7 +53,7 @@ const backgroundImage = {
           </div>
         </section>
         <section className='py-12'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
            <div className=''>
               <div className=''>
                  <h5 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Lithuania&#39;s Admission Process — Step by Step</h5>
@@ -77,8 +77,8 @@ admission process. Keep your eyes on the below given points:</p>
           </div>
         </section>
         <section className='py-12 bg-primary/10'>
-          <div className='container mx-auto'>
-            <h5 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Lithuania Intake 2026 - Necessary Timelines</h5>
+          <div className='mx-auto max-w-6xl px-4'>
+            <h5 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Lithuania Intake - Necessary Timelines</h5>
             <p className='text-justify text-base md:text-lg font-regular'>Having knowledge about the application timeline is very important for an easy and smooth
 Lithuanian admission process. Lithuania majorly gives two intakes:</p>
             <div className='flex flex-col md:flex-row justify-center items-center gap-10 my-3'>
@@ -86,22 +86,22 @@ Lithuanian admission process. Lithuania majorly gives two intakes:</p>
                 <div className='shadow-lg shadow-gray-500 rounded-lg bg-white'>
                    <h5 className='px-2 py-3 rounded-bl-2xl rounded-t-lg bg-primary text-white'><LuCalendarClock className='size-6 inline-block'/> September intake (important intake)</h5>
                    <ul className='mt-3 p-3 space-y-2'>
-                    <li><span className='font-semibold'>Application start:</span><br /> <span className='text-gray-600'>January-February 2026</span></li>
-                    <li><span className='font-semibold'>Application Deadline:</span> <br /><span className='text-gray-600'>May-June 2026</span></li>
-                    <li><span className='font-semibold'>Classes begin:</span><br /> <span className='text-gray-600'>September 2026</span></li>
+                    <li><span className='font-semibold'>Application start:</span><br /> <span className='text-gray-600'>January-February</span></li>
+                    <li><span className='font-semibold'>Application Deadline:</span> <br /><span className='text-gray-600'>May-June</span></li>
+                    <li><span className='font-semibold'>Classes begin:</span><br /> <span className='text-gray-600'>September</span></li>
                    </ul>
                 </div>
                  <div className='shadow-lg shadow-gray-500 rounded-lg bg-white'>
                    <h5 className='px-2 py-3 rounded-bl-2xl rounded-t-lg bg-primary text-white'><LuCalendarClock className='size-6 inline-block' />  February intake(limited courses)</h5>
                    <ul className='mt-3 p-3 space-y-2'>
-                    <li><span className='font-semibold'>Application start:</span> <br /><span className='text-gray-600'>October-November 2025</span></li>
-                    <li><span className='font-semibold'>Apllication Deadline:</span> <br /> <span className='text-gray-600'>December 2025-January 2026</span></li>
-                    <li><span className='font-semibold'>Classes begin:</span><br /> <span className='text-gray-600'>February 2026</span></li>
+                    <li><span className='font-semibold'>Application start:</span> <br /><span className='text-gray-600'>October-November</span></li>
+                    <li><span className='font-semibold'>Apllication Deadline:</span> <br /> <span className='text-gray-600'>December-January</span></li>
+                    <li><span className='font-semibold'>Classes begin:</span><br /> <span className='text-gray-600'>February</span></li>
                    </ul>
                 </div>
               </div>
               <div className=''>
-               <Image width={400} height={540} src={'./assets/images/admission/admission-intake.svg'} alt="2026 Study in Lithuania Intake"/>
+               <Image width={400} height={540} src={'/assets/images/admission/admission-intake.svg'} alt="2026 Study in Lithuania Intake"/>
               </div>
             </div>
             <p className='text-justify text-base md:text-lg font-regular'>If you want to get the fast and smooth admission then you all are suggested to apply for the
@@ -109,7 +109,7 @@ Lithuania intake 2026 as soon as possible.</p>
           </div>
         </section>
         <section className='py-12'>
-             <div className='container mx-auto'>
+             <div className='mx-auto max-w-6xl px-4'>
                <div className=''>
                 <h5 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Important documents for lithuania admission</h5>
                 <p className='text-justify text-base md:text-lg font-regular'>Getting your correct documents ready is a main part of the Lithuanian admission process. You may check the list of required documents:</p>
@@ -142,7 +142,7 @@ Lithuania intake 2026 as soon as possible.</p>
              </div>
         </section>
         <section className='py-12 bg-primary/10'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
             <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Your Global Education Begins Here</h3>
            <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'></h3>
            <div className='flex flex-col lg:flex-row justify-center items-center gap-5'>

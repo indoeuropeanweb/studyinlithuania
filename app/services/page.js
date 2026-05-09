@@ -55,7 +55,7 @@ const page = () => {
         </div>
       </section>
         <section className='py-15 bg-primary/10'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
           <div className='px-5'>
              <div className=''>
                 <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Complete Study in Lithuania Guidance for Indian Students</h3>
@@ -66,7 +66,7 @@ const page = () => {
           </div>
         </section>
         <section className='py-15'>
-                  <div className='container mx-auto'>
+                  <div className='mx-auto max-w-6xl px-4'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 px-5'>
                     <div className=''>
                       <div className='my-5'>
@@ -83,7 +83,7 @@ const page = () => {
                   </div>
             </section>
         <section className='py-15 bg-primary/10 rounded-bl-[180px]'>
-                  <div className='container mx-auto'>
+                  <div className='mx-auto max-w-6xl px-4'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 px-5'>
                       <div className=''>
                          <Image width={540} height={480} src={'/assets/images/services/visa-process.png'} alt="Visa Process for Study in Lithuania"/>
@@ -105,7 +105,7 @@ const page = () => {
                   </div>
             </section>
         <section className="py-20">
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center text-primary">Grab Your Free Consultation Now !</h2>
           <div className="flex-col-reverse flex md:flex-row justify-center items-center gap-10 mt-16">
               <Form />
@@ -118,7 +118,7 @@ const page = () => {
         </div>
       </section>
         <section className='py-15 bg-primary/10 rounded-tr-[180px]'>
-                  <div className='container mx-auto'>
+                  <div className='mx-auto max-w-6xl px-4'>
                     <div className='mx-5'>
                       <div className='my-5'>
                        <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary'>Indian Education Loan for Study in Lithuanias</h3>
@@ -205,7 +205,7 @@ const page = () => {
                   </div>
             </section>
             <section className='py-12'>
-             <div className='container mx-auto'>
+             <div className='mx-auto max-w-6xl px-4'>
               <div className='mx-5'>
                 <div className='my-5'>
                        <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary text-center'>How Indian Students Can Get Scholarships in Lithuania </h3>

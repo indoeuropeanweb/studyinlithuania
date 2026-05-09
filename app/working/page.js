@@ -46,7 +46,7 @@ const {openPopup} = usePopup();
          </div>
         </section>
         <section className='py-15 bg-primary/10'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
           <div className='px-5'>
              <div className=''>
                 <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Post Study Work in Lithuania | Jobs & Stay Back Options</h3>
@@ -57,7 +57,7 @@ const {openPopup} = usePopup();
           </div>
         </section>
         <section className='py-15'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
             <div className='px-5'>
             <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Work regulations for international students in Lithuania</h3>
             <div className='flex flex-col-reverse lg:flex-row justify-center items-center gap-10'>
@@ -78,7 +78,7 @@ const {openPopup} = usePopup();
                   </div>
         </section>
         <section className='bg-primary/10 py-12 rounded-bl-[180px]'>
-           <div className='container mx-auto'>
+           <div className='mx-auto max-w-6xl px-4'>
             <div className='px-5'>
               <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-8 text-center'>Part-time work opportunities in Lithuania for students</h3>
               <p className='text-justify mt-2 text-base md:text-lg font-regular'>Searching for part-time jobs in Lithuania is comparatively smooth in main cities. Students may find several job roles as per their comfortability and skills.</p>
@@ -112,7 +112,7 @@ const {openPopup} = usePopup();
            </div>
         </section>
         <section className='py-12'>
-           <div className='container mx-auto'>
+           <div className='mx-auto max-w-6xl px-4'>
             <div className='px-5'>
             <div className='flex justify-center items-center gap-10 flex-col-reverse lg:flex-row'>
             <div className='max-w-125'>
@@ -133,7 +133,7 @@ const {openPopup} = usePopup();
            </div>
         </section>
         <section className='py-12 bg-primary/10 rounded-tr-[180px]'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
             <div className='px-5'>
             <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-5 text-center'>Lithuania Job Opportunities After Graduation</h3>
             <p className='text-justify mt-2 text-base md:text-lg font-regular'>The availability of professional prospects following graduation is one of the main benefits of choosing jobs in Lithuania.</p>
@@ -165,7 +165,7 @@ const {openPopup} = usePopup();
           </div>
         </section>
          <section className='py-12'>
-           <div className='container mx-auto'>
+           <div className='mx-auto max-w-6xl px-4'>
             <div className='flex justify-center items-center gap-10 flex-col-reverse lg:flex-row px-5'>
             <div className='max-w-125'>
             <h3 className='text-lg sm:text-xl md:text-3xl font-semibold text-primary mb-5'>Post Study Work Lithuania – Stay Back Options</h3>
@@ -185,9 +185,9 @@ const {openPopup} = usePopup();
            </div>
         </section>
         <section className='bg-primary/10' style={backgroundCTA}>
-         <div className='container mx-auto'>
+         <div className='mx-auto max-w-6xl px-4'>
             <div className='py-12 max-w-160 px-5'>
-            <h5 className='text-lg sm:text-xl md:text-2xl font-medium mt-5 text-primary'>Ready to Work in Lithuania After Your Studies?</h5>
+            <h5 className='text-lg sm:text-xl md:text-2xl font-semibold mt-5 text-primary'>Ready to Work in Lithuania After Your Studies?</h5>
             <p className='text-justify mt-2 text-base md:text-lg font-regular text-gray-700'>Explore job opportunities, understand stay-back options, and start your career in Europe with expert guidance from <Link className='decoration-0 hover:underline text-tertiary font-medium' href={'https://indoeuropean.in'} target='_blank'>Indo-European Study Abroad Consultants</Link>.</p>
             <div className='mt-10 space-x-3'>
               {/* <Link className='font-semibold hover:underline text-sm md:text-base text-primary' href={'/contact'}>Check Eligibility</Link> */}

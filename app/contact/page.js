@@ -31,7 +31,7 @@ const page = () => {
          </div>
         </section>
           <section className='my-12'>
-          <div className='container mx-auto'>
+          <div className='mx-auto max-w-6xl px-4'>
           <div className='rounded-lg bg-white 
                 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)] 
                 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25),0_10px_15px_-3px_rgba(0,0,0,0.1)] 
