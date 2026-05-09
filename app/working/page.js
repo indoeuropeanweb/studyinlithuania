@@ -188,9 +188,8 @@ const {openPopup} = usePopup();
          <div className='mx-auto max-w-6xl px-4'>
             <div className='py-12 max-w-160 px-5'>
             <h5 className='text-lg sm:text-xl md:text-2xl font-semibold mt-5 text-primary'>Ready to Work in Lithuania After Your Studies?</h5>
-            <p className='text-justify mt-2 text-base md:text-lg font-regular text-gray-700'>Explore job opportunities, understand stay-back options, and start your career in Europe with expert guidance from <Link className='decoration-0 hover:underline text-tertiary font-medium' href={'https://indoeuropean.in'} target='_blank'>Indo-European Study Abroad Consultants</Link>.</p>
+            <p className='text-justify mt-2 text-base md:text-lg font-regular text-gray-700'>Explore job opportunities, understand stay-back options, and start your career in Europe with expert guidance from <Link className='decoration-0 hover:underline text-tertiary font-medium' href={'https://indoeuropean.in'} target='_blank'>Indo European Study Abroad Consultants</Link>.</p>
             <div className='mt-10 space-x-3'>
-              {/* <Link className='font-semibold hover:underline text-sm md:text-base text-primary' href={'/contact'}>Check Eligibility</Link> */}
               <Link className='font-medium text-sm md:text-base text-primary bg-white hover:text-white hover:bg-primary border-2 border-primary px-5 py-2 rounded-md duration-500 ease-in-out' href={'https://zoom.us/j/91022278457#success'}><FaVideo className='inline-block size-5'/> &nbsp;Get Expert Advice</Link>
               <button className='font-medium text-sm md:text-base text-white bg-primary hover:bg-primary/75 border-2 border-primary px-5 py-2 rounded-md duration-500 ease-in-out' onClick={() => openPopup(true)}><CiLocationArrow1 className='inline-block size-5'/> &nbsp;Apply Now</button>
             </div>

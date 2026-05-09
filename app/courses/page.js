@@ -14,6 +14,7 @@ import CourseCard from "@/components/ui/CourseCard";
 import { FaSearch, FaVideo } from "react-icons/fa";
 import Pagination from '@mui/material/Pagination';
 import { CiLocationArrow1 } from "react-icons/ci";
+import { coursesSchema } from "@/utils/clientdata/schemaData";
 
 const Page = () => {
   const [filterEl, setFilterEl] = useState({
@@ -61,8 +62,6 @@ const Page = () => {
 
         const response = await axios.get(url);
 
-        // console.log("API Response:", response?.data);
-
         setCourseData(response?.data);
       } catch (err) {
         console.error("Fetch Error:", err);
@@ -104,15 +103,16 @@ const Page = () => {
     ""
   );
 
-  // useEffect(() => {
-  //   console.log("Filters:", filters);
-  // }, [filters]);
-
-  // useEffect(() => {
-  //   console.log("Course Data:", courseData);
-  // }, [courseData]);
-
   return (
+    <>
+    <Script
+      id="schema-script"
+      type="application/ld+json"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(coursesSchema),
+      }}
+    />
     <div>
       <section
         className="h-80 flex justify-center items-center"
@@ -209,7 +209,7 @@ const Page = () => {
                 Language={course.Launguage_Of_Teaching} 
                 LanguageProficiency={course.English_Proficiency_Requirement} 
                 Description={course.Program_Description}/>
-              }) : <div className="text-center text-tertiary">No Data Found !</div>}
+              }) : <div className="col-span-1 lg:col-span-2 text-center text-tertiary w-full font-medium text-base lg:text-xl">No Data Found !</div>}
              </div>
              <div className="flex justify-center items-center">
               <Pagination
@@ -226,8 +226,8 @@ const Page = () => {
       <section className='bg-primary/10' style={backgroundCTA}>
          <div className='mx-auto max-w-6xl px-4'>
             <div className='py-12 max-w-160 px-5'>
-            <h5 className='text-lg sm:text-xl md:text-2xl font-semibold mt-5 text-primary'>Ready to Work in Lithuania After Your Studies?</h5>
-            <p className='text-justify mt-2 text-base md:text-lg font-regular text-gray-700'>Explore job opportunities, understand stay-back options, and start your career in Europe with expert guidance from <Link className='decoration-0 hover:underline text-tertiary font-medium' href={'https://indoeuropean.in'} target='_blank'>Indo-European Study Abroad Consultants</Link>.</p>
+            <h5 className='text-lg sm:text-xl md:text-2xl font-semibold mt-5 text-primary'>Start​‍​‌‍​‍‌ Your Career in Lithuania After Your Graduation!</h5>
+            <p className='text-justify mt-2 text-base md:text-lg font-regular text-gray-700'>Explore great job prospects, know about post-study stay arrangements, and begin your journey to a bright future in Europe with professional guidance from <a href={"https://indoeuropean.in"} className="decoration-0 hover:underline text-tertiary font-medium">Indo European Study Abroad ​‍​‌‍​‍‌Consultants</a>.</p>
             <div className='mt-10 space-x-3'>
               <Link className='font-medium text-sm md:text-base text-primary bg-white hover:text-white hover:bg-primary border-2 border-primary px-5 py-2 rounded-md duration-500 ease-in-out' href={'https://zoom.us/j/91022278457#success'}><FaVideo className='inline-block size-5'/> &nbsp;Get Expert Advice</Link>
               <button className='font-medium text-sm md:text-base text-white bg-primary hover:bg-primary/75 border-2 border-primary px-5 py-2 rounded-md duration-500 ease-in-out' onClick={() => openPopup(true)}><CiLocationArrow1 className='inline-block size-5'/> &nbsp;Apply Now</button>
@@ -236,6 +236,7 @@ const Page = () => {
          </div>
       </section>
     </div>
+        </>
   );
 };
 

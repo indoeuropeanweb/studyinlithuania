@@ -31,61 +31,61 @@ export const heroSlides = [
 export const stats = [
   {
     icon: FaGraduationCap,
-    value: "11000+",
-    text: "Scholarships awarded through Indo in one year",
+    value: "3000+",
+    text: "Scholarships awarded through Study in Lithuania Centre",
   },
   {
     icon: FaEarthAmericas,
     value: "5000+",
-    text: "Students successfully placed in top universities",
+    text: "Students successfully placed in Top Universities",
   },
   {
     icon: FaAward,
-    value: "250+",
-    text: "Partner universities across Europe",
+    value: "20+",
+    text: "Partner universities in Lithuania",
   },
   {
     icon: MdPeopleAlt,
-    value: "98%",
-    text: "Visa success rate for our applicants",
+    value: "99%",
+    text: "Visa success rate for Our Applicants",
   },
 ];
 
 export const universities = [
   {
-    src: "/assets/images/universities/1.jpg",
+    src: "/assets/images/universities/1.webp",
     alt: "Vilnius Gediminas Technical University",
   },
   {
-    src: "/assets/images/universities/2.jpg",
+    src: "/assets/images/universities/2.webp",
     alt: "Vytautas Magnus University",
   },
   {
-    src: "/assets/images/universities/3.jpg",
+    src: "/assets/images/universities/3.webp",
     alt: "Vilnius University",
   },
   {
-    src: "/assets/images/universities/4.jpg",
+    src: "/assets/images/universities/4.webp",
     alt: "Lithuanian University of Health Sciences",
   },
   {
-    src: "/assets/images/universities/5.jpg",
+    src: "/assets/images/universities/5.webp",
     alt: "Lietuvos Sporto Universitetas",
   },
   {
-    src: "/assets/images/universities/6.png",
+    src: "/assets/images/universities/6.webp",
     alt: "Kauno Kolegija",
   },
   {
-    src: "/assets/images/universities/7.png",
+    src: "/assets/images/universities/7.webp",
     alt: "SMK University of Applied Social Sciences",
   },
   {
-    src: "/assets/images/universities/8.png",
+    src: "/assets/images/universities/8.webp",
     alt: "Klaipeda University",
   },
   {
-    src: "/assets/images/universities/10.png",
+    src: "/assets/images/universities/10.webp",
     alt: "ISM University of Management and Economics",
   },
 ];

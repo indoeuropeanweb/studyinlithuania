@@ -11,6 +11,9 @@ import { heroSlides, stats, universities, admissionData, studyBenefits, getIcon 
 import Form from "@/components/layouts/form/Form";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
+import Head from "next/head";
+import Script from "next/script";
+import {homeSchema} from "@/utils/clientdata/schemaData.js"; 
 
 
 export default function Home() {
@@ -19,7 +22,22 @@ export default function Home() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+
   return (
+    <>
+    <Script
+      id="schema-script"
+      type="application/ld+json"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(homeSchema),
+      }}
+    />
+    <Head>
+      <title>Study in Lithuania from India | Best Lithuania Study Visa Consultant in India</title>
+      <meta name="description" content="Get expert guidance to study in Lithuania from India. Explore top universities, English-taught courses, admission support, visa guidance, scholarships, and free consultation."/>
+      <meta name="keywords" content="study in Lithuania, study in Lithuania for Indian students, Lithuania study visa, Lithuania universities, Lithuania admission consultants, study abroad consultants Delhi, Lithuania student visa, Lithuania courses, Lithuania education consultants, Indo European study abroad"/>
+    </Head>
     <div className="min-h-screen bg-zinc-50 font-sans dark:bg-black">
       <section className="relative">
       <main className="relative min-h-140 xl:min-h-180 w-full bg-white dark:bg-black">
@@ -132,7 +150,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[url('/assets/images/homepage/girl-2.png')] bg-cover bg-center bg-no-repeat rounded-bl-[180px]">
+      <section className="bg-[url('/assets/images/homepage/girl-2.webp')] bg-cover bg-center bg-no-repeat rounded-bl-[180px]">
         <div className="mx-auto max-w-6xl px-4">
           <div className="py-20 max-w-175 px-8">
              <h2 className="uppercase text-2xl sm:text-3xl md:text-4xl font-medium text-white">Applications are Open !</h2>
@@ -152,7 +170,7 @@ export default function Home() {
               <Form />
             <div className="">
                 <div className="">
-                   <Image className="mx-auto" width={360} height={360} src={'/assets/images/homepage/girl-3.png'} alt="Study in Lithuania - Study Abroad Consultants"/>
+                   <Image className="mx-auto" width={360} height={360} src={'/assets/images/homepage/girl-3.webp'} alt="Study in Lithuania - Study Abroad Consultants"/>
                 </div>
             </div>
           </div>
@@ -318,5 +336,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+        </>
   );
 }

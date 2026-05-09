@@ -38,6 +38,15 @@ body {
     100% { transform: translateX(-50%); } 
   }
 
+  @keyframes animate-zoom {
+    0%, 100% {
+      transform: scale(0.75)
+    }
+    50%{
+      transform: scale(1)
+    }
+}
+
   .animate-marquee {
     animation: marquee 5s linear infinite;
   }
@@ -50,3 +59,11 @@ body {
 .text-stroke {
   -webkit-text-stroke: 2px #FF5421;
 }
+
+.animate-zoomInOut{
+  animation: animate-zoom 4s linear infinite;
+}
+
+
+
+

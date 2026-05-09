@@ -29,10 +29,10 @@ const Header = () => {
   return (
     <header className={`w-full fixed top-0 z-50 shadow-sm hover:bg-primary ${scrolled ? 'md:bg-primary' : 'md:bg-black/5'} bg-primary group/item-1 transition duration-300`}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-18 lg:h-24">
           <Link href="/" className="flex items-center">
             <Image
-              src="/assets/images/logos/logo.png"
+              src="/assets/images/logos/logo.webp"
               alt="Study in Lithuania"
               width={160}
               height={70}
@@ -40,7 +40,7 @@ const Header = () => {
               className={`hidden group-hover/item-1:hidden ${scrolled ? 'hidden' : 'md:block'} transition duration-300`}
             />
             <Image
-              src="/assets/images/logos/light-logo.png"
+              src="/assets/images/logos/light-logo.webp"
               alt="Study in Lithuania"
               width={160}
               height={70}
@@ -85,13 +85,13 @@ const Header = () => {
             </Link>
           </nav>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 bg-white px-2 py-1 rounded-lg animate-zoomInOut">
             <Link
               href="https://zoom.us/j/91022278457#success"
               target="_blank"
-              className={`cursor-pointer text-sm md:text-md lg:text-base px-4 py-2 rounded-md hover:bg-white transition duration-300 ${scrolled ? 'bg-gray-100 text-primary':'bg-primary text-white'} group-hover/item-1:bg-gray-100 group-hover/item-1:text-primary font-medium`}
+              // className={`cursor-pointer text-sm md:text-md lg:text-base px-4 py-2 rounded-md hover:bg-white transition duration-300 ${scrolled ? 'bg-gray-100 text-primary':'bg-primary text-white'} group-hover/item-1:bg-gray-100 group-hover/item-1:text-primary font-medium`}
             >
-             <FaVideo className="size-5 inline-block" />&nbsp; Get Expert Advice
+             <Image className="" height={60} width={110} src={'/assets/images/logos/meet-exp.png'} alt="study in lithuania consultants" /> <span className="text-sm font-semibold text-[#2766e0]">Join Via Zoom</span>
             </Link>
           </div>
           <button
